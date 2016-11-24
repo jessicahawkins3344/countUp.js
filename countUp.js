@@ -42,6 +42,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 
     var self = this;
 
+
      // default options
     self.options = {
         useEasing : true, // toggle easing
@@ -63,7 +64,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 
     self.d = (typeof target === 'string') ? document.getElementById(target) : target;
     self.startVal = Number(startVal);
-    self.endVal = Number(endVal);
+    self.endVal = this.text();
     self.countDown = (self.startVal > self.endVal);
     self.frameVal = self.startVal;
     self.decimals = Math.max(0, decimals || 0);
